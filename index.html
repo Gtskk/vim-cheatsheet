@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vim Cheat Sheet</title>
+
+	<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+	
+	<div id="vim" style="margin:0 auto;">
+		<img id="veg" src="img/vim.png" height="998" width="1694" usemap="#vimMap" >
+	    <div style="clear:both; height:8px;"></div>
+	    <div id="selections" style="clear:both;"></div>
+	</div>
+	<map name="vimMap" id="vimMap">
+	  	<area name="c_w_w_key" shape="poly" coords="1342,915,1336,925,1343,936,1381,937,1418,937,1426,926,1416,915" href="#" />
+	  	<area name="c_w_p_key" shape="poly" coords="1342,887,1336,897,1343,908,1381,909,1418,909,1426,898,1416,887" href="#" />
+	  	<area name="mh_sp_key" shape="poly" coords="1416,826,1407,839,1413,850,1438,851,1458,851,1467,839,1459,828" href="#" />
+	  	<area name="c_p_key" shape="poly" coords="1391,743,1391,753,1393,765,1417,765,1435,766,1439,754,1436,743" href="#" />
+	  	<area name="mh_l_key" shape="rect" coords="1334,680,1387,695" href="#" />
+	  	<area name="mh_h_key" shape="rect" coords="1334,657,1387,672" href="#" />
+	  	<area name="mh_n_key" shape="rect" coords="1334,635,1387,650" href="#" />
+	  	<area name="mh_e_key" shape="rect" coords="1334,612,1387,627" href="#" />
+	  	<area name="mh_q_key" shape="rect" coords="1334,591,1387,606" href="#" />
+	  	<area name="mh_w_key" shape="rect" coords="1334,568,1387,583" href="#" />
+	  	<area name="u_key" shape="rect" coords="1334,528,1387,543" href="#" />
+	  	<area name="jh_key" shape="rect" coords="1334,507,1387,522" href="#" />
+	  	<area name="<_key" shape="rect" coords="1334,481,1387,496" href="#" />
+	  	<area name=">_key" shape="rect" coords="1334,460,1387,475" href="#" />
+	  	<area name="r_key" shape="rect" coords="1334,437,1387,452" href="#" />
+	  	<area name="J_key" shape="rect" coords="1334,413,1387,428" href="#" />
+	  	<area name="p_key" shape="rect" coords="1334,394,1387,409" href="#" />
+	  	<area name="C_key" shape="rect" coords="1334,368,1387,383" href="#" />
+	  	<area name="D_key" shape="rect" coords="1334,345,1387,360" href="#" />
+	  	<area name="x_key" shape="rect" coords="1334,324,1387,339" href="#" />
+	  	<area name="N_key" shape="poly" coords="1089,918,1086,929,1091,938,1111,940,1119,938,1122,929,1121,918" href="#" />
+	  	<area name="gd_key" shape="poly" coords="1045,854,1044,864,1045,874,1069,876,1088,876,1093,865,1090,854" href="#" />
+	  	<area name="#_key" shape="poly" coords="1086,792,1086,800,1086,808,1105,810,1115,808,1119,802,1118,794" href="#" />
+	  	<area name="c_f_key" shape="poly" coords="1180,664,1179,674,1182,685,1209,685,1238,685,1242,673,1240,664" href="#" />
+	  	<area name="tz_x_key" shape="poly" coords="1179,727,1176,737,1182,749,1203,748,1222,749,1226,738,1224,727" href="#" />
+	  	<area name="mx_key" shape="poly" coords="1052,727,1049,737,1055,749,1076,748,1095,749,1099,738,1097,727" href="#" />
+	  	<area name="gg_key" shape="poly" coords="1051,694,1048,704,1054,716,1075,715,1094,716,1098,705,1096,694" href="#" />
+	  	<area name="G_key" shape="poly" coords="1179,694,1176,704,1182,716,1203,715,1222,716,1226,705,1224,694" href="#" />
+	  	<area name="zb_key" shape="poly" coords="1179,631,1176,641,1182,653,1203,652,1222,653,1226,642,1224,631" href="#" />
+	  	<area name="zz_key" shape="poly" coords="1179,599,1176,609,1182,621,1203,620,1222,621,1226,610,1224,599" href="#" />
+	  	<area name="L_key" shape="poly" coords="1051,631,1048,642,1051,653,1068,653,1080,653,1083,642,1080,631" href="#" />
+	  	<area name="M_key" shape="poly" coords="1051,599,1048,610,1051,621,1068,621,1080,621,1083,610,1080,599" href="#" />
+	  	<area name="]}_key" shape="poly" coords="1189,455,1185,465,1189,479,1205,480,1221,479,1227,467,1222,453" href="#" />
+	  	<area name="}_key" shape="poly" coords="1194,422,1191,433,1194,444,1215,445,1220,433,1215,422" href="#" />
+	  	<area name="{_key" shape="poly" coords="1054,422,1051,433,1054,444,1075,445,1080,433,1075,422" href="#" />
+	  	<area shape="poly" coords="1054,422,1051,433,1054,444,1075,445,1080,433,1075,422" href="#" />
+	  	<area name="^_key" shape="poly" coords="1056,358,1053,369,1056,380,1077,381,1082,369,1077,358" href="#" />
+	  	<area name="$_key" shape="poly" coords="1188,325,1185,336,1188,347,1209,348,1214,336,1209,325" href="#" />
+	  	<area name="0_key" shape="poly" coords="1056,325,1053,336,1056,347,1077,348,1082,336,1077,325" href="#" />
+	  	<area name="B_key" shape="poly" coords="1100,229,1095,241,1100,253,1114,252,1127,252,1131,241,1129,230" href="#" />
+	  	<area name="W_key" shape="poly" coords="1056,229,1051,241,1056,253,1070,252,1083,252,1087,241,1085,230" href="#" />
+	  	<area name="e_key" shape="poly" coords="1059,255,1056,266,1059,277,1080,278,1085,266,1080,255" href="#" />
+	  	<area name="b_key" shape="poly" coords="1102,202,1099,213,1102,224,1123,225,1128,213,1123,202" href="#" />
+	  	<area name="l_key" shape="poly" coords="1200,111,1197,122,1200,133,1221,134,1226,122,1221,111" href="#" />
+	  	<area name="k_key" shape="poly" coords="1152,111,1149,122,1152,133,1173,134,1178,122,1173,111" href="#" />
+	  	<area name="j_key" shape="poly" coords="1105,111,1102,122,1105,133,1126,134,1131,122,1126,111" href="#" />
+	  	<area name="vim" shape="rect" coords="53,46,213,74" href="#" />
+	  	<area name="h_key" shape="poly" coords="1056,111,1053,122,1056,133,1077,134,1082,122,1077,111" href="#" />
+	  	<area name="w_key" shape="poly" coords="1058,202,1053,214,1058,226,1072,225,1085,225,1089,214,1087,203" href="#" />
+	  	<area name="[{_key" shape="poly" coords="1049,455,1045,465,1049,479,1065,480,1081,479,1087,467,1082,453" href="#" />
+	  	<area name="%_key" shape="poly" coords="1051,492,1048,501,1053,513,1070,514,1082,513,1085,502,1081,493" href="#" />
+	  	<area name="H_key" shape="poly" coords="1051,564,1048,575,1051,586,1068,586,1080,586,1083,575,1080,564" href="#" />
+	  	<area name="zt_key" shape="poly" coords="1179,565,1176,575,1182,587,1203,586,1222,587,1226,576,1224,565" href="#" />
+	  	<area name="c_b_key" shape="poly" coords="1051,664,1050,674,1053,685,1080,685,1109,685,1113,673,1111,664" href="#" />
+	  	<area name="*_key" shape="poly" coords="1046,792,1046,800,1046,808,1065,810,1075,808,1079,802,1078,794" href="#" />
+	  	<area shape="poly" coords="1044,824" href="#" />
+	  	<area name="fx_key" shape="poly" coords="1045,823,1045,833,1049,847,1069,845,1088,845,1093,834,1090,823" href="#" />
+	  	<area name="xg_key" shape="poly" coords="1047,885,1043,897,1052,908,1081,907,1111,907,1120,899,1113,886" href="#" />
+	  	<area name="n_key" shape="poly" coords="1047,918,1044,929,1049,938,1069,940,1077,938,1080,929,1079,918" href="#" />
+	  	<area name="esc_key" shape="poly" coords="1335,57,1334,69,1336,76,1363,77,1394,77,1440,77,1449,68,1447,58" href="#" />
+	  	<area name="v_key" shape="rect" coords="1334,81,1391,96" href="#" />
+	  	<area name="V_key" shape="rect" coords="1335,101,1390,117" href="#" />
+	  	<area name="c_v_key" shape="poly" coords="1335,122,1333,134,1339,141,1364,140,1382,142,1385,130,1383,122" href="#" />
+	  	<area name="i_key" shape="rect" coords="1334,148,1389,163" href="#" />
+	  	<area name="R_key" shape="rect" coords="1333,169,1391,187" href="#" />
+	  	<area name="a_key" shape="rect" coords="1333,193,1391,211" href="#" />
+	  	<area name="A_key" shape="rect" coords="1333,215,1395,231" href="#" />
+	  	<area name="y_key" shape="rect" coords="1332,256,1383,273" href="#" />
+	  	<area name="d_key" shape="rect" coords="1334,277,1387,292" href="#" />
+	  	<area name="c_key" shape="rect" coords="1335,302,1388,317" href="#" />
+	  	<area name="c_n_key" shape="poly" coords="1338,743,1338,753,1340,765,1364,765,1382,766,1386,754,1383,743" href="#" />
+	  	<area name="c_x_c_f_key" shape="poly" coords="1338,770,1336,783,1343,793,1377,792,1409,791,1414,780,1410,771" href="#" />
+	  	<area name="mh_vsp_key" shape="poly" coords="1337,828,1337,839,1343,850,1368,851,1397,849,1401,839,1395,828" href="#" />
+	  	<area name="mh_diffs_key" shape="poly" coords="1342,857,1336,867,1343,878,1381,879,1418,879,1426,868,1416,857" href="#" />
+	</map>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.imagemapster.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+		   	var image = $('img');
+		   	var xref = {
+		   		vim: "<b>VIM</b>命令图解",
+		   		h_key: "向左移动",
+		   		l_key: "向右移动",
+		   		redpepper: "<b>Red peppers</b> are actually the same as green peppers, they've just been left on the vine longer. Delicious when fire-roasted.",
+		   		yellowpepper: "Similar to red peppers, <b>yellow peppers</b> are sometimes sweeter.",
+		   		celery: "<b>Celery</b> is a fascinating vegetable. Being mostly water, it actually takes your body more calories to process it than it provides.",
+		   		cucumbers: "<b>Cucumbers</b> are cool.",
+		   		broccoli: "<b>Broccoli</b> is like a forest of goodness in your mouth. And very good for you. Eat lots of broccoli!",
+		   		dip: "Everything here is good for you but this one. <b>Don't be a dip!</b>"
+		   	};
+		   	var defaultDipTooltip = 'I know you want the dip. But it\'s loaded with saturated fat, just skip it and enjoy as many delicious, crisp vegetables as you can eat.';
+		   	image.mapster(
+	       	{
+	       		fillOpacity: 0.4,
+	       		fillColor: "d42e16",
+	       		strokeColor: "3320FF",
+	       		strokeOpacity: 0.8,
+	       		strokeWidth: 4,
+	       		stroke: true,
+	            isSelectable: true,
+				singleSelect: true,
+	            mapKey: 'name',
+	            listKey: 'name',
+	            onClick: function (e) {
+	                var newToolTip = defaultDipTooltip;
+	                $('#selections').html(xref[e.key]);
+	                if (e.key==='asparagus') {
+	                	newToolTip = "OK. I know I have come down on the dip before, but let's be real. Raw asparagus without any of that " +
+	                			"delicious ranch and onion dressing slathered all over it is not so good.";
+	                }
+	                image.mapster('set_options',{areas: [{
+	                	key: "dip",
+	                	toolTip: newToolTip
+	                	}]
+	                });
+	            },
+	            showToolTip: true,
+	            toolTipClose: ["tooltip-click", "area-click"],
+	            areas: [
+	                {
+	                	key: "vim",
+	                	fillColor: "ffffff",
+	                	toolTip: "<b>VIM</b>命令图解"
+	                },
+	                {
+	                	key: "h_key",
+	                	fillColor: "000000",
+	                	toolTip: "向左移动"
+	                },
+	                {
+	                	key: "l_key",
+	                	fillColor: "000000",
+	                	toolTip: "向右移动"
+	                },
+	                {
+	                   	key: "k_key",
+	                  	toolTip: "向上移動"
+	                },
+	                {
+	                   	key: "j_key",
+	                  	toolTip: "向下移動"
+	                },
+	                {
+	                   	key: "w_key",
+	                  	toolTip: "按单词移动，向右移到下一个单词开头，一个单词由字母，数字和下划线组成"
+	                },
+	                {
+	                   	key: "e_key",
+	                  	toolTip: "按单词移动，向右移到下一个单词结尾，对于大写的E，则认为单词是由空格来分隔"
+	                },
+	                {
+	                   	key: "W_key",
+	                  	toolTip: "单词移动，不同于小写w的是，它认为单词是由空格来分隔"
+	                },
+	                {
+	                   	key: "b_key",
+	                  	toolTip: "单词移动，光标左移一个单词到开头"
+	                },
+	                {
+	                   	key: "B_key",
+	                  	toolTip: "单词移动，不同于小写b的是，它认为单词是由空格来分隔"
+	                },
+	                {
+	                   	key: "0_key",
+	                  	toolTip: "是数字0，将光标移动至当前行首（注意与^区分）"
+	                },
+	                {
+	                   	key: "$_key",
+	                  	toolTip: "将光标移动至行尾"
+	                },
+	                {
+	                   	key: "^_key",
+	                  	toolTip: "将光标移动至当前行首（注意与0区分）"
+	                },
+	                {
+	                   	key: "{_key",
+	                  	toolTip: "移动到段落或者区块的上一段"
+	                },
+	                {
+	                   	key: "}_key",
+	                  	toolTip: "移动到段落或者区块的下一段"
+	                },
+	                {
+	                   	key: "[{_key",
+	                  	toolTip: "移动到段落或者区块的开头"
+	                },
+	                {
+	                   	key: "]}_key",
+	                  	toolTip: "移动到段落或者区块的结尾"
+	                },
+	                {
+	                   	key: "%_key",
+	                  	toolTip: "匹配括号移动，包括 (, {, ["
+	                },
+	                {
+	                   	key: "H_key",
+	                  	toolTip: "跳转到屏幕顶端"
+	                },
+	                {
+	                   	key: "zt_key",
+	                  	toolTip: "将当前行移动到屏幕顶端"
+	                },
+	                {
+	                   	key: "M_key",
+	                  	toolTip: "跳转到屏幕中间"
+	                },
+	                {
+	                   	key: "zz_key",
+	                  	toolTip: "将当前行移动到屏幕中间"
+	                },
+	                {
+	                   	key: "L_key",
+	                  	toolTip: "跳转到屏幕底部"
+	                },
+	                {
+	                   	key: "zb_key",
+	                  	toolTip: "将当前行移动到屏幕底部"
+	                },
+	                {
+	                   	key: "c_b_key",
+	                  	toolTip: "跳到上一页"
+	                },
+	                {
+	                   	key: "c_f_key",
+	                  	toolTip: "跳到下一页"
+	                },
+	                {
+	                   	key: "gg_key",
+	                  	toolTip: "跳到文件顶部"
+	                },
+	                {
+	                   	key: "G_key",
+	                  	toolTip: "跳到文件底部"
+	                },
+	                {
+	                   	key: "mx_key",
+	                  	toolTip: "一般用不到，先不纠结吧，嘿嘿"
+	                },
+	                {
+	                   	key: "tz_x_key",
+	                  	toolTip: "一般用不到，先不纠结吧，嘿嘿"
+	                },
+	                {
+	                   	key: "*_key",
+	                  	toolTip: "向后搜索光标所在单词"
+	                },
+	                {
+	                   	key: "#_key",
+	                  	toolTip: "向前搜索光标所在单词"
+	                },
+	                {
+	                   	key: "fx_key",
+	                  	toolTip: "向后搜索字符x"
+	                },
+	                {
+	                   	key: "gd_key",
+	                  	toolTip: "跳转到光标所在单词的定义处"
+	                },
+	                {
+	                   	key: "xg_key",
+	                  	toolTip: "搜索xxx"
+	                },
+	                {
+	                   	key: "n_key",
+	                  	toolTip: "对于/搜索出来的结果，可以选中下一个搜索结果，?搜索出来的则相反"
+	                },
+	                {
+	                   	key: "N_key",
+	                  	toolTip: "对于/搜索出来的结果，可以选中上一个搜索结果，?搜索出来的则相反"
+	                },
+	                {
+	                   	key: "esc_key",
+	                  	toolTip: "进入正常模式"
+	                },
+	                {
+	                   	key: "v_key",
+	                  	toolTip: "进入可视模式"
+	                },
+	                {
+	                   	key: "i_key",
+	                  	toolTip: "进入插入模式"
+	                },
+	                {
+	                   	key: "R_key",
+	                  	toolTip: "进入替换模式"
+	                },
+	                {
+	                   	key: "a_key",
+	                  	toolTip: "在光标所在处之后添加"
+	                },
+	                {
+	                   	key: "A_key",
+	                  	toolTip: "在光标所在行的结尾处添加"
+	                },
+	                {
+	                   	key: "y_key",
+	                  	toolTip: "复制一段范围"
+	                },
+	                {
+	                   	key: "d_key",
+	                  	toolTip: "删除或者剪切一段范围"
+	                },
+	                {
+	                   	key: "c_key",
+	                  	toolTip: "编辑修改"
+	                },
+	                {
+	                   	key: "x_key",
+	                  	toolTip: "删除或者剪切单个字符"
+	                },
+	                {
+	                   	key: "D_key",
+	                  	toolTip: "将光标所在处到行尾删除"
+	                },
+	                {
+	                   	key: "C_key",
+	                  	toolTip: "修改光标所在处到行尾的内容"
+	                },
+	                {
+	                   	key: "p_key",
+	                  	toolTip: "粘贴"
+	                },
+	                {
+	                   	key: "J_key",
+	                  	toolTip: "和下一行合并成一行"
+	                },
+	                {
+	                   	key: "r_key",
+	                  	toolTip: "替换单个字符"
+	                },
+	                {
+	                   	key: ">_key",
+	                  	toolTip: "缩进"
+	                },
+	                {
+	                   	key: "<_key",
+	                  	toolTip: "反缩进"
+	                },
+	                {
+	                   	key: "jh_key",
+	                  	toolTip: "重复上一命令"
+	                },
+	                {
+	                   	key: "u_key",
+	                  	toolTip: "撤销上一命令"
+	                }
+	            ]
+	        });
+	    });
+    </script>
+
+</body>
+</html>
