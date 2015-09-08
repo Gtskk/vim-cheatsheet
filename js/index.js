@@ -17,9 +17,9 @@ $(document).ready(function () {
 			singleSelect: true,
 			mapKey: 'name',
 			listKey: 'name',
-			onClick: function (e) {
-					$('#selections').html('不错哦');
-			},
+			/*onClick: function (e) {
+				$('#selections').html('不错哦');
+			},*/
 			showToolTip: true,
 			toolTipClose: ['area-mouseout'],
 			areas: [
